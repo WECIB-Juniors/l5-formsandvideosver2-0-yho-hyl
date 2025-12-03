@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+    CTI-110 L5 - Beginner Friendly Version
+    Student: Your Name
+    Date: 2025-12-02
+    Note: Put a video file at media/sample.mp4 to play the video locally.
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Simple Form and Video</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="page">
+            <header>
+                <h1>Contact Us</h1>
+                <p class="intro">A very simple form and a local video for the L5 assignment.</p>
+            </header>
+
+            <main>
+                <section>
+                    <h2>Contact form</h2>
+                    <!-- Using action="#" so the form does not leave your page while testing locally. 
+                             Change to "https://httpbin.org/get" or "/post" if you want to see the data echoed online. -->
+                    <form action="#" method="get">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" required placeholder="Your Name">
+
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required placeholder="Your Email">
+
+                        <label for="interest">I like _________</label>
+                        <select id="interest" name="interest">
+                            <option value="html">Watermelon</option>
+                            <option value="css">Apple</option>
+                            <option value="js">Grapes</option>
+                        </select>
+
+                        <h3>Choose one:</h3>
+
+                        <div class="radios">
+                            <input type="radio" id="python" name="language" value="Python" checked>
+                            <label class="inline" for="python">Python</label>
+
+                            <input type="radio" id="java" name="language" value="Java">
+                            <label class="inline" for="java">Java</label>
+                        </div>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" minlength="10" placeholder="Write a short message..."></textarea>
+
+                        <div class="small">
+                            <input type="checkbox" id="updates" name="updates">
+                            <label for="updates">Send me updates</label>
+                        </div>
+
+                        <button type="submit">Send</button>
+                    </form>
+                </section>
+
+                <section>
+                    <h2>Video</h2>
+                    <!-- Video source: videos file. -->
+                    <video controls width="640">
+                        <source src="coffee.mp4" type="video/mp4">
+                        <track  srclang="en" src="media/captions.vtt" label="Coffee" captions="coffee">
+                        Your browser does not support the video element.
+                    </video>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
